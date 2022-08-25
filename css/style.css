@@ -1,0 +1,1211 @@
+@font-face {
+    font-family: "Franklin Gothic Demi";
+    src: url("../fonts/FranklinGothic-Demi.woff2") format("woff2"), url("../fonts/FranklinGothic-Demi.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FranklinSerif';
+    src: url('../fonts/FranklinSerif-Bold.eot');
+    src: url('../fonts/FranklinSerif-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FranklinSerif-Bold.woff2') format('woff2'),
+        url('../fonts/FranklinSerif-Bold.woff') format('woff'),
+        url('../fonts/FranklinSerif-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+*, *::before, *:after{
+    box-sizing: border-box;
+}
+
+body {
+    /*font-family: "Franklin Gothic Demi";*/
+    font-family: 'Roboto', sans-serif !important;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 100%;
+    background: none;
+}
+
+.whole {
+    background: #fff;
+}
+
+.container-bg {
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-bg {
+    background: #fff;
+    width: 100%;
+    position: relative;
+}
+
+
+/*.header-bg::after {
+  width: 50%;
+  background: #0a1912;
+  position: absolute;
+  min-height: 328px;
+  content: "";
+  display: block;
+  top: 0;
+  right: 0;
+} */
+
+.header-bg::before {
+    width: 100%;
+    background: #6bb344;
+    position: absolute;
+    height: 4px;
+    content: "";
+    display: block;
+    bottom: -10px;
+    left: 0;
+}
+
+.header-bg .container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+}
+
+.header-left {
+    width: 50%;
+    margin-left: 0px;
+    text-align: center;
+}
+
+.header-right {
+    width: 50%;
+    position: relative;
+    text-align: center;
+}
+
+
+/*.header-right::before {
+  width: 120px;
+  height: 328px;
+  background: #0a1912;
+  -webkit-transform: skew(195deg);
+  -moz-transform: skew(195deg);
+  transform: skew(195deg);
+  content: "";
+  position: absolute;
+  left: -60px;
+}*/
+
+.header-right h2 {
+    text-align: justify;
+    color: #fff;
+    position: relative;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    padding: 0;
+    margin: 40px 0;
+    font-size: 30px;
+}
+
+.header-right ul {
+    padding: 0;
+    margin: 15px 30px 0 0;
+    float: right;
+    display: flex;
+}
+
+.header-right ul li {
+    margin: 0 20px;
+}
+
+.header-right ul li a {
+    color: #6bb344;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.header-right ul li a:hover {
+    color: #fff;
+}
+
+.logo {
+    float: left;
+    margin-top: 0;
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+.professional {
+    background: #6bb344;
+    border-radius: 0.5vw;
+    display: inline-block;
+    padding: 1vw;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.professional h2 {
+    color: white;
+    font-size: 48px;
+    padding: 0;
+    margin: 0 0 6px;
+    text-align: center;
+}
+
+.professional img {
+    width: 100%;
+}
+
+.capture-moments {
+    width: 100%;
+}
+
+.capture-moments span {
+    font-size: 32px;
+    color: #215c01;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: -2px;
+}
+
+.list-menu {
+    width: 100%;
+    display: flex;
+}
+
+.btn-span a {
+    background: #fff;
+    padding: 7px 15px;
+    box-shadow: none;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+    color: #4c4c4c;
+    box-shadow: 2px 2px 3px rgb(0 0 0 / 50%);
+    border-radius: 20px;
+}
+
+.btn-span a:before {
+    content: "";
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #215a01;
+    border-radius: 100%;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s ;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+} .btn-span a:hover:before {
+    transform: scale(2);
+} 
+span.btn-span a {
+    position: relative;
+}
+span.btn-span a span{ position: relative;}
+.btn-span a:hover{ color: #fff;}
+
+.list-menu ul {
+    padding: 25px 0px;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.list-menu ul li {
+    padding: 0px;
+    margin: 0 4px;
+    font-size: 16px;
+    font-weight: bold;
+    align-items: center; display: inline-block; vertical-align: top;
+}
+/* 
+.list-menu ul li::before {
+    position: relative;
+    content: "";
+    height: 31px;
+    width: 45px;
+    min-width: 45px;
+    background: url(../images/list-icon.png) no-repeat top left;
+    margin-right: 10px;
+} */
+
+.container-background {
+    background: url(../images/section-bg.png) no-repeat center bottom;
+    width: 100%;
+    background-size: 100% auto;
+}
+
+.passport-bg {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.passport-bg div h2 {
+    padding: 0;
+    margin: 0;
+    font-size: 88px;
+    color: #0a1913;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.passport-bg div h3 {
+    padding: 0;
+    margin: 0;
+    font-size: 52px;
+    color: #6cb445;
+    text-transform: capitalize;
+    font-weight: 900;
+    margin-top: -28px;
+}
+
+.wifi-image {
+    width: 12%;
+}
+
+.wifi-image img {
+    width: 80%;
+}
+
+.your-digital-id img {
+    width: 60%;
+}
+
+.your-digital-id {
+    display: flex;
+    justify-content: center;
+}
+
+.british-passport {
+    margin-top: -110px;
+    padding-left: 50px;
+}
+
+.footer-bg {
+    background: #0a1912;
+    width: 100%;
+    display: table;
+}
+
+.footer {
+    width: 100%;
+}
+
+.footer ul {
+    padding: 10px 0;
+    margin: 0;
+    display: table;
+}
+
+.footer ul li {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    color: #8bc165;
+    font-size: 18px;
+    font-weight: 100;
+    width: 50%;
+    float: left;
+    min-height: 32px;
+    justify-content: center;
+}
+
+.footer ul li img {
+    margin-right: 10px;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #6bb344;
+}
+
+.help-bg {
+    display: flex;
+    padding: 0px;
+    background: #f2f2f2;
+}
+
+.help-bg .help-left {
+    flex-basis: 50%;
+}
+
+.help-bg .help-right {
+    flex-basis: 50%;
+}
+
+.help-bg .help-right ul {
+    padding: 0;
+    margin: 0 0 0 15px;
+}
+
+.help-bg h3 {
+    font-size: 28px;
+    margin: 20px 0 10px 0;
+}
+
+.help-bg h4 {
+    font-size: 22px;
+    margin: 20px 0 10px 0;
+}
+
+.your-digital-id.contact-img img {
+    width: 1048px;
+    height: 520px;
+}
+
+input[type=text],
+input[type=email],
+textarea,
+select {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /*margin-top: 6px;
+  margin-bottom: 16px; */
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #6bb344;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.containercontact {
+    border-radius: 5px;
+    background: none;
+    padding: 40px 0px;
+}
+
+.msgsuccess {
+    border: 2px solid;
+    text-align: center;
+    background: #6bb344;
+    padding: 10px;
+    color: #fff;
+    font-size: 20px;
+    width: 68%;
+    margin: 0 auto;
+}
+
+.cont_text {
+    text-align: center;
+    padding-bottom: 60px;
+    font-size: 26px;
+}
+
+form {
+    width: 100%;
+    margin: 0 auto;
+}
+
+ul.menuline {
+    display: inline-flex;
+    width: auto;
+    text-align: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+span.spanclass {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.aboutus {
+    font-size: 24px;
+    text-align: left;
+}
+
+.cropper-container {
+    width: 100% !important;
+    height: 500px !important;
+    background-color: #ffffff !important;
+}
+
+img#blah {
+    /* display: table;
+    border: 2px solid;
+    width: 380px; */
+}
+
+.inner-box-1 {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 22px 12px;
+}
+
+.inner-box-1 h3 {
+    margin-bottom: 20px;
+}
+
+.imgdiv {
+    text-align: center;
+    border: 2px solid;
+    padding: 10px;
+    width: 405px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* max-height: 450px; */
+}
+
+.imgdiv img {
+    /* width: 100%; */
+    text-align: center;
+    width: 100% auto;
+    max-height: 400px;
+}
+
+input#file {
+    font-size: 16px;
+    font-weight: 700;
+    background: #6bb344;
+    padding: 8px;
+}
+
+.help-bg-home {
+    display: flex; flex-wrap: wrap;
+}
+
+.help-left {
+    margin-right: 0px;
+}
+
+.help-right {
+    margin-left: 0px;
+    margin-top: 12px;     width: 100%;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #4caf50;
+    background-color: #8bc34a73;
+}
+
+.text-photo {
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.required {
+    color: red;
+}
+
+/* .btn-span:hover {
+    background: #215a01;
+} */
+
+label.radiobtn {
+    /* margin: 0px 0px 0 px !important;*/
+}
+
+.container3 {
+    display: flex;
+}
+
+.container3 .professional h2 {
+    font-size: 26px;
+}
+
+.container3 .header-left {
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.header-right .professional {
+    /* padding: 2px 32px 14px 35px; */
+}
+
+.display_block {
+    display: block;
+}
+
+span.price {
+    background: #6bb344;
+    padding: 1px 6px 2px 6px;
+    border-radius: 10px;
+    color: white;
+}
+
+label.radiobtn {
+    font-size: 13px;
+}
+
+.professional-bg h2 {
+    font-size: 24px;
+}
+
+.professional-bg {
+    padding-top: 12px;
+    padding-bottom: 14px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.bg_black {
+    text-align: center;
+    background: #000000;
+}
+
+.steps_css h3 {
+    font-size: 20px;
+}
+
+.btnhref {
+    background: #215a01;
+    color: #ffffff;
+    border-radius: 30px;
+    padding: 10px;
+    box-shadow: 0px 10px #215a01d9;
+    border: none;
+}
+
+button.btnhref:hover {
+    background: #215a01;
+    box-shadow: 2px 2px #215a01;
+}
+
+.textsteps {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.container-background-blog {
+    background: url(../images/blog-banner.jpg) no-repeat center top;
+    width: 100%;
+    background-size: cover;
+}
+
+.container-background-blog .passport-bg {
+    padding: 10%;
+}
+
+.col-md-4.p-0.cata-img.cat-vd {
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+}
+
+.img-fluid {
+    height: 240px !important;
+    object-fit: contain;
+}
+
+.cssnew {
+    background: #fff;
+    box-shadow: 0 0 2px 1px #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 15px 0 20px;
+    min-height: 420px;
+}
+
+.cat-hover11 {
+    padding: 30px 20px 0px 20px;
+    text-align: center;
+}
+
+.cat-hv.mycss h5 {
+    color: #6bb344;
+    font-size: 22px;
+    padding-bottom: 12px;
+}
+
+.help-left input, .help-left select {
+    margin-bottom: 15px;
+}
+.help-bg-home select{ background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") no-repeat; background-position: right 10px center;
+    background-size: 20px;}
+.address_info img{ max-width: 100%;}
+.address_info{ padding: 15px 30px 0;}
+.help-bg-home .form-group{ width: 100%;}
+.stripe_method strong{ font-size: 30px; line-height: 30px;}
+.stripe_method { margin: 0 0 20px;}
+.card_field{ border: 1px solid }
+.card_field { padding: 5px 12px; background: #fff; border: 1px solid #ced4da; border-radius: 5px;}
+.cards{ max-width: 120px; vertical-align: top; margin-left: 10px; image-rendering: -webkit-optimize-contrast;}
+.cropper { margin: 0 auto;}
+.payment_method_list { overflow: auto;}
+.payment_method_list .form-check{ float: left; padding: 0px; min-height: unset; margin: 0 20px 0 0;}
+.payment_method_list input[type="radio"] {  width: 18px; height: 18px; vertical-align: top; float: left; margin-right: 7px; appearance: none; border: 1px solid #ccc; border-radius: 50%;}
+.payment_method_list input[type="radio"]:focus{ outline: none; box-shadow: none;}
+.payment_method_list input[type="radio"]:checked {background: #6bb344 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='2' fill='%23fff'/%3E%3C/svg%3E"); border-color: #6bb344;}
+
+.payment_method_list label.radiobtn { font-size: 15px; vertical-align: top; line-height: 17px;}
+.paypal_method img{ max-width: 230px;}
+.paypal_method { margin-bottom: 20px;}
+.delivery_option_title{ font-weight: 600;}
+.stripe_method strong{ font-weight: normal; font-size: 20px;}
+label[for="payment_method"] { font-size: 18px; font-weight: 600;}
+.stripe_method strong {font-weight: 600;font-size: 16px;}
+img{ max-width: 100%; vertical-align: top;}
+.paypal_method span{ display: block; font-size: 14px; margin: 10px 0 0;}
+.containercontact h1{ font-size: 48px ;}
+.map iframe{ width: 100%; vertical-align: top;} 
+.contact-banner h1 { position: absolute; width: 1200px; left: 50%; transform: translate(-50%, -50%); top: 50%; max-width: 100%; color: #fff; text-align: center;}
+.contact-banner img{ width: 100%;}
+.contact-banner{ position: relative;}
+.containercontact .help-bg{ background: none;}
+.containercontact span.spanclass {width: 40px; height: 40px; background: #000; display: inline-flex; flex-wrap: wrap;  align-items: center; justify-content: center;
+    border-radius: 50%; vertical-align: middle; margin-right: 5px;}
+.containercontact span.spanclass svg{ fill: white;}
+.containercontact span.spanclass a{ color: #000000;}
+.containercontact .help-left p { font-size: 15px;}
+.banner_bg .header{ float: left; width: 260px;}
+.banner_bg .header-bg::before{ display: none;}
+.banner_bg .header-bg{background: none;display: flex;flex-wrap: wrap; padding-bottom: 1.5vw;} 
+.banner_bg header {width: 100%; margin-top: 0.5vw;}
+.banner_bg .header-left{width: 50%;}
+span.payment-success { color: #0f5132; background-color: #d1e7dd; border-color: #badbcc; padding: 1rem; display: block;}
+span.payment-success:empty{ display: none;}
+.banner_bg .header-right {width: 50%;padding-left: 9%;}
+.banner_bg .passport-bg div h2{font-size: 6.2vw;display: inline-block;clear: both; float:left; color: #0c2000; line-height: 100%; font-weight: 900;}
+.banner_bg .passport-bg div h3{font-size: 4.5vw; margin-top: 0px; display: inline-block;vertical-align: top; color: #215a01; line-height: 100%; padding-left: 0.5vw; font-weight: 900; width: 100%;}
+.banner_bg .british-passport {margin-top: 0;position: absolute;right: 0;padding: 0;width: 22%; bottom: 3%;}
+.banner_bg .british-passport img {width: 100%;}
+.banner_bg section{display: inline-block;vertical-align: top;width: 100%;}
+.banner_bg .professional h2{font-size: 1.8vw; letter-spacing: normal; margin: 0; line-height: 100%;} 
+.banner_bg{background: url(../images/banner_bg.jpg) no-repeat center;width: 100%;background-size: cover;display: inline-block;position: relative; padding-bottom: 1.5vw; vertical-align: top;}
+.banner_bg .container-background{background: none;width: 100%;}
+.banner_bg .passport-bg > div:first-child{width: 100%;float: left; margin-bottom: 2.5vw;}
+.banner_bg .passport-bg > div:last-child{width: 100%;display: inline-block;padding: 0;}
+.banner_bg .passport-bg img { width: 100%; max-width: 100%;}
+.banner_bg .your-digital-id{justify-content: flex-start;/* width: 78%; */}
+.banner_bg .professional{margin: 1vw 0 0 0;width: 100%; font-family: 'FranklinSerif'; box-shadow: 2px 2px 4px 0px rgb(0 0 0 / 42%);}
+.banner_bg .your-digital-id img {width: 100%;max-width: 100%;}
+.banner_bg > .container{/* max-width: 730px; *//* width: unset; */}
+.new_container{ max-width: 900px;}
+.banner_bg .container-background > .container{padding-right: 0px;padding: 0;max-width: 100%;}
+
+.banner_left {
+    float: left;
+    width: 42.5%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 0 0 0 2vw;
+}
+
+.banner_right {
+    float: left;
+    width: 57%;
+    max-width: 100%;
+    padding: 0 0 0 3.5%;
+}
+
+.logo img {
+    width: 100%;
+    vertical-align: top;
+}
+
+.adddress_info_list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 0 1vw;
+}
+
+.banner_bg .adddress_info_list img {
+    width: 1.65vw; opacity: .5;
+    margin-right: 0.75vw;
+}
+
+.adddress_info_list span {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 1.2vw;
+    color: #215a01; width: calc(100% - 2.4vw); line-height: 100%;
+}
+.adddress_info_list a{ color: #215a01;}
+
+.professional span {
+    font-size: 1.5vw;
+    line-height: 110%;
+    display: inline-block;
+    vertical-align: top; color: #fff;
+}
+
+.passport_img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 10%;
+}
+.passport_img img{ width: 100%;}
+.photo_upload_info .card-title { margin: 0; color: #fff; text-align: center; font-size: 18px; font-weight: normal;}
+.photo_upload_info .card-body { background: #0c2000; border-radius: 0 0 8px 8px; padding: 12px 6px;}
+.photo_upload_info .card-img-top { border-top-left-radius: 8px; border-top-right-radius: 8px;}
+.photo_upload_info .card{ flex-direction: row; border-radius: 8px; flex-wrap: wrap;}
+.inner-box-1 > .container{ max-width: 100%; padding: 0px;}
+.passport_photo{ background: #f5f5f5;}
+.passport_photo .professional-bg{ margin: 0px; padding: 0; display: inline-block; text-align: left;}
+.passport_photo .professional-bg h2 { font-size: 36px; margin: 0px;}
+.passport_photo .professional-bg> span {display: block; font-size: 25px; margin: 0 0 10px;}
+.edit_productimg { background: #fff; padding: 15px; border-radius: 10px;}
+.edit_productimg label {  font-size: 22px;}
+.edit_productimg { background: #fff; padding:15px 20px; border-radius: 10px; display: inline-block; vertical-align: top;
+    width: auto; box-shadow: 0px 6px 20px 0 rgb(31 43 52 / 24%); margin: 15px 0;}
+.photo_upload_info > .row{ margin-left: -6px; margin-right: -6px;}
+.photo_upload_info [class^="col"]{ padding-left: 6px; padding-right: 6px;}
+.passport_photo .inner-box-1{ text-align: center;}
+.edit_productimg a { background: #6bb344; padding: 15px 24px; color: #fff; font-size: 20px; border-radius: 7px; margin: 0 0 0 25px;
+    display: inline-block; }
+.british_passport h1 {font-size: 32px; font-weight: 700; color: #212529; line-height: 100%; margin: 0 0 20px; text-align: center;}
+.british_passport_content { margin: 0 0 40px;}
+.procedure_online b {font-size: 28px; color: #212529; line-height: 30px; margin:0 0 15px; display: block; text-align: center;}
+.british_passport li { margin: 0 0 15px; font-size: 16px; line-height: 24px;}
+.procedure_online b:after, .british_passport h1:after { content: ""; display: block; width: 60px; height: 2px; background: #000;
+    margin: 10px auto;}
+.british_passport { margin-top: 30px;}
+.btn-span.active a:before { transform: scale(2);}
+.btn-span.active a { color: #fff;}
+.about_img img { width: 100%; height: 500px; object-fit: cover;}
+.aboutus p { font-size: 16px; margin: 0 0 15px; line-height: 24px;}
+.aboutus strong{ font-size: 30px; line-height: normal; margin: 0 0 10px; display: block;}
+.about_img { margin-top: 30px;}
+.worldwide_banner img{ width: 100%;}
+.worldwide_content_list b { font-size: 24px; margin: 0 0 10px; display: block;}
+.worldwide_content_list { margin: 0 0 25px;}
+.worldwide_banner { margin: 0 0 30px;}
+.worldwide_content_list p { line-height: 24px; margin: 0px 0 15px;}
+.services_list b { font-size: 20px; margin: 0 0 5px; display: block;}
+.aboutus.ourservices { margin: 40px 0px 30px;}
+.aboutus .container{ max-width: 900px;}
+.aboutus_content{ margin: 40px 0 0;}
+.why_choose_us { margin-bottom: 40px;}
+.contact_content_list b { font-size: 28px; margin: 0 0 10px; display: block; line-height: 100%;}
+.contact_content_list { margin: 0 0 30px;}
+.how_it_work b {font-size: 28px; color: #212529; line-height: 30px; margin:0 0 15px; display: block; text-align: center;}
+.how_it_work b:after {content: ""; display: block; width: 60px; height: 2px; background: #000; margin: 10px auto;}
+.how_it_work { margin: 0 0 50px;} 
+.british_passport_banner .banner_left{ position: relative;}
+.british_passport_banner .passport_img { right: -3%; bottom: -1.5vw; width: 38.5%; left: auto;}
+.blog_banner div h2{ text-align: center; color:#fff;}
+.nice-select .option{ white-space: pre-line; line-height: normal;}
+div.nice-select{ height: auto; line-height: normal; background: #fff; background-position: right 10px center; background-size: 20px; padding: 0.375rem 0.75rem;
+    font-size: 1rem; font-weight: 400; line-height: 1.5; color: #212529; border: 1px solid #ced4da; border-radius: 0.25rem; width: 100%;     display: flex;
+    align-items: center; flex-wrap: wrap; white-space: normal;}
+div.nice-select:after {background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") no-repeat;
+    width: 17px; height: 9px; border: none; transform: unset; background-position: center; padding: 0;
+    font-size: 1rem;  margin: 0 0 0; right: 10px; background-size: 20px; position: static; margin-left: auto;}
+div.nice-select .option{ line-height: normal; font-weight: normal; white-space: pre-line; padding: 10px 15px;}
+div.nice-select.open:after{ transform: rotate(-180deg); transform-origin: center;}
+div.nice-select .list{ width: 100%; margin-top: 2px;}
+div.nice-select span.current { max-width: calc(100% - 20px);}
+.help-bg-home select.selectize{ display: none;}
+
+
+
+@media (max-width: 1200px){
+    .banner_bg .passport-bg > div:last-child{ width: 60%; position: relative; z-index: 1;}
+    .adddress_info_list span{ font-size: 1.3vw;}
+}
+
+@media only screen and (max-width: 991px) {
+    .banner_right{ padding: 0 0 0 2.5%;}
+    .adddress_info_list span{ font-size: 1.6vw; width: calc(100% - 2.75vw);}
+    .banner_bg .adddress_info_list img{ width: 2vw;}
+    .photo_upload_info .card-title{ font-size: 15px;}
+}
+
+
+@media only screen and (max-width: 900px) {
+    .imgdiv {
+        width: 336px;
+    }
+    .your-digital-id.contact-img img {
+        max-width: 100%;
+        height: 10%;
+    }
+    img {
+        max-width: 100%;
+    }
+    .header-bg .container {
+        flex-wrap: wrap;
+    }
+    .header-left {
+        width: 100%;
+        position: relative;
+        z-index: 1;
+    }
+    .header-right {
+        width: 100%;
+    }
+    .logo {
+        width: 100%;
+        text-align: center;
+    }
+    .capture-moments {
+        text-align: center;
+    }
+    .professional {
+        display: table;
+        margin: 20px auto 20px;
+    }
+    .header-right::before {
+        bottom: 0;
+    }
+    .header-bg::after {
+        bottom: 0;
+        width: 100%;
+        top: auto;
+    }
+    .list-menu {
+        flex-wrap: wrap;
+    }
+    .passport-bg div h2 {
+        font-size: 78px;
+    }
+    .passport-bg div h3 {
+        font-size: 46px;
+        margin-top: -14px;
+    }
+    .your-digital-id img {
+        max-width: 65%;
+    }
+    .british-passport {
+        margin-top: -70px;
+    }
+    .footer ul li {
+        width: 100%;
+    }
+    .passport-bg img {
+        max-width: 80%;
+    }
+    .desktop {
+        display: none;
+    }
+    .footer ul li {font-size: 16px;}
+    .container3 .professional h2 {
+        font-size: 24px;
+    }
+    label.radiobtn {
+        font-size: 10px;
+    }
+    .banner_bg .your-digital-id img{ width: 100%;}
+    .banner_bg .desktop{ display: block;}
+    .list-menu ul li{ font-size: 14px; margin: 0 3px;} 
+    .btn-span a{ padding: 7px 12px;}
+}
+
+@media only screen and (max-width: 767px) {
+    .help-bg-home {
+        display: block;
+    }
+    /* .input-group {
+        width: 340px;
+    } */
+    .aboutus {
+        font-size: 18px;
+        padding: 10px;
+    }
+    .capture-moments span {
+        font-size: 26px;
+    }
+    .professional {
+        text-align: center;
+        padding: 20px 0px;
+    }
+    .professional h2 {
+        font-size: 36px;
+        text-align: center;
+        letter-spacing: normal;
+    }
+    .professional img {
+        max-width: 80%;
+    }
+    .header-right ul li a {
+        font-size: 18px;
+    }
+    .header-right ul li {
+        margin: 0 10px;
+    }
+    .passport-bg div h3 {
+        font-size: 27px;
+        margin-top: 0;
+    }
+    .passport-bg div h2 {
+        font-size: 46px;
+    }
+    .british-passport {
+        margin-top: -30px;
+    }
+    .footer ul li {
+        font-size: 16px;
+    }
+
+    .passport-bg img {
+        margin-left: 0px;
+    }
+    .help-bg {
+        flex-wrap: wrap;
+    }
+    .help-bg .help-left {
+        flex-basis: 100%;
+    }
+    .help-bg .help-right {
+        flex-basis: 100%;
+    }
+    /* .containercontact {
+        padding: 10px;
+    } */
+    form {
+        width: 100%;
+    }
+    .cont_text {
+        padding-bottom: 30px;
+        font-size: 20px;
+    }
+    .msgsuccess {
+        width: auto;
+        margin: 0 auto;
+    }
+    section.inner-box-1.showon h2 {
+        font-size: 24px;
+    }
+    .container3 {
+        display: inline;
+    }
+    .container3 .professional h2 {
+        font-size: 20px;
+        padding: 6px;
+    }
+    label.radiobtn {
+        font-size: 10px;
+    }
+    .professional-bg h2 {
+        font-size: 16px;
+    }
+    .inner-box-1.showon1 .container3 .header-left { margin-left: 0; margin-right: 0; padding: 0 12px;}
+    .help-bg-home .help-left { margin-right: 0; }
+    .help-bg-home .help-right{ margin-left: 0px;}
+    .address_info{ padding: 15px 15px 0;}
+    .banner_bg .british-passport { width: 18%;}
+    .banner_bg .professional{ width: 100%; display: inline-block; vertical-align: top; padding: 5%;} 
+    .list-menu ul{ width: auto;}
+    .list-menu{ justify-content: center;}
+    .list-menu ul li:first-child:before { margin-right: 0; }
+    .banner_right{ padding-left: 2%;}
+    .banner_bg .adddress_info_list img { width: 2.5vw;}
+    .adddress_info_list span { font-size: 1.8vw; width: calc(100% - 3.25vw);}
+    .banner_bg .header-right{ padding-left: 5%;}
+    .banner_bg .professional h2{ font-size: 2.2vw;}
+    .professional span{ font-size: 2vw;}
+    .photo_upload_info .card{ margin-bottom: 20px;}
+    .list-menu ul li{ margin: 0 3px 15px;}
+    .passport_photo .professional-bg h2{ font-size: 30px;}
+    .passport_photo .professional-bg> span{ font-size: 22px;}
+    .edit_productimg label { font-size: 20px;}
+    .edit_productimg a{ padding: 13px 24px; font-size: 18px;} 
+    .edit_productimg{ padding: 12px 15px;}
+    .photo_upload_info .card-title { font-size: 18px;}
+    .british_passport h1{ font-size: 28px; line-height: normal;}
+    .procedure_online b{ font-size: 24px;}
+    .british_passport li { font-size: 15px;}
+    .british_passport { margin-top: 0;}
+    .aboutus_content { margin: 0;}
+    .contact_content_list b{ font-size: 24px;}
+    .how_it_work b{ font-size: 24px;}
+    .contact_content_list{ font-size: 15px;}
+}
+
+@media only screen and (max-width: 575px) {
+    /* .btn-span a{ padding: 4px 15px;} */
+    .banner_left{ width: 100%; position: relative; padding: 0 15px;}
+    .banner_right { width: 100%; padding: 0 15px; margin: 15px 0 0;}
+    .professional span { font-size: 3.5vw;}
+    .banner_bg .professional h2 { font-size: 4vw;}
+    .adddress_info_list span { font-size: 2.5vw; }
+    .banner_bg .british-passport { width: 22%;}
+    .banner_bg .professional{ margin: 2vw 0 0 0;}
+    .banner_bg .passport-bg div h3{ font-size: 8vw;}
+    .banner_bg .passport-bg div h2{ font-size: 11vw;}
+    .adddress_info_list span{ width: calc(100% - 5.5vw); font-size: 3vw;}
+    .banner_bg .adddress_info_list img { width: 4vw; margin-right: 1.5vw;}
+    .passport_img{ width: 19%;}
+    .banner_bg .header-bg{ padding-bottom: 0; margin-bottom: 20px;}
+    .british_passport_banner .passport_img{ right: 0;}
+    
+}
+
+/* @media only screen and (max-width: 540px) {
+    .banner_left { width: 40%;}
+    .banner_right{ width: 60%;}
+    .adddress_info_list span{ font-size: 1.8vw;}
+    .banner_bg .header-left { width: 40%;}
+    .banner_bg .header-right{ width: 60%;}
+    .professional span { font-size: 2.3vw;}
+    .banner_bg .professional h2 { font-size: 2.5vw;}
+} 
+
+@media only screen and (max-width: 480px) {
+
+    .banner_bg .professional img{ vertical-align: top;}
+    .list-menu ul li { padding: 0; }
+    .adddress_info_list span { font-size: 2.2vw; width: calc(100% - 4.25vw); word-break: break-all;}
+    .banner_bg .adddress_info_list img { width: 3.5vw; }
+    
+}*/
+
+@media only screen and (max-width: 500px) {
+    .passport_photo .professional-bg{ width: 100%;}
+    .edit_productimg a{ margin-left: auto;}
+    .edit_productimg{ display: flex; flex-wrap: wrap; align-items: center;}
+    .edit_productimg label{ width: 100%; font-size: 18px; text-align: center;}
+    .edit_productimg a { margin: 9px auto 0; padding: 10px 24px; font-size: 18px;}
+}
+
+@media only screen and (max-width: 460px) {
+    ul.menuline {
+        display: inline;
+    }
+    .imgdiv {
+        width: 96%;
+    }
+    .list-menu ul {
+        padding: 15px 0px;
+    }
+    section.inner-box-1.showon h2 {
+        font-size: 18px;
+    }
+    .professional img {
+        max-width: 70%;
+    }
+    .professional {
+        margin: 10px auto 10px;
+    }
+    .your-digital-id img {
+        width: 80%;
+    }
+    .passport-bg img {
+        margin-left: 0px;
+    }
+    .aboutus {
+        font-size: 15px;
+    }
+    .steps_css h3 {
+        font-size: 16px;
+    }
+    .textsteps {
+        font-size: 16px;
+    }
+    .address_info{ padding: 0px 10px 0;}
+   
+}
+
+@media only screen and (max-width: 420px) {
+    .list-menu ul li { font-size: 12px;}
+    .btn-span a { padding: 7px 10px;}
+}
+
+
+@media (max-width: 400px) {
+    .professional h2{ font-size: 30px;}
+    .professional img { max-width: 60%;}
+    .footer ul li { font-size: 15px; flex-wrap: wrap;}
+    .footer ul li span { display: inline-block; width: calc(100% - 40px); text-align: left; }
+    .footer ul li img { max-width: 30px;}
+    .stripe_method strong { font-size: 23px; line-height: 23px; }
+    .adddress_info_list span { font-size: 3.2vw; width: calc(100% - 6.5vw);}
+    .banner_bg .adddress_info_list img { width: 5vw; }
+    .banner_bg .british-passport { width: 27%;}
+    .containercontact span.spanclass{ width: 35px; height: 35px;}
+    .containercontact span.spanclass svg { max-width: 18px;}
+    .help-bg a{ font-size: 14px;}
+    .passport_photo .professional-bg h2 { font-size: 26px;}
+    .passport_photo .professional-bg> span{ font-size: 18px;}
+    .worldwide_content_list b{ font-size: 20px;}
+    .worldwide_content_list p { font-size: 15px; }
+    .aboutus strong{ font-size: 26px;}
+    .services_list b{ font-size: 18px;}
+}
+
+
+@media (max-width: 360px) {
+    .professional h2{ font-size: 27px;}
+    .footer ul li{ font-size: 14px;}
+    .footer ul li img { max-width: 20px; margin-right: 5px;}
+    .footer ul li span{ width: calc(100% - 25px);}
+    /* .btn-span a { padding: 4px 10px; } */
+    .btn-span a { padding: 5px 8px;}
+    .list-menu ul li { font-size: 11px; margin: 0 1px 15px;}
+    
+}
+
+@media (max-width: 350px) {
+    .containercontact span.spanclass { width: 32px; height: 32px;}
+    .help-bg a { font-size: 13px;}
+}
+
+img.img-fluid-full {
+    width: 100%;
+}
+
+.bbggg {
+    box-shadow: 0 0 2px 1px #ddd;
+    border-radius: 4px;
+}
+
+.blogRightGrid {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 2px 1px #ddd;
+    border-radius: 4px;
+}
+
+.blogRightGrid>ul>li {
+    list-style-type: none;
+    margin: 30px 0;
+    border-left: 2px solid #6bb344;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.blogRightGrid h5 a {
+    color: #6bb344;
+}
+
+.cat-hv11 h4 {
+    font-size: 18px;
+    padding: 10px;
+    text-align: justify;
+}
+
+.backgrond {
+    background: #fff;
+    padding-top: 30px;
+}

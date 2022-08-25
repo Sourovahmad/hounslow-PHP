@@ -1,0 +1,11 @@
+Array
+(
+    [message] => paymentsucess
+    [phone] => 07553949353
+    [email] => newstockimage@gmail.com
+    [paymentmethods] => Paypal
+    [address2] => 
+    [address3] => 
+    [DocTypeActual] => Armenia visa 35x45 mm (3.5x4.5 cm)
+    [PayerID] => J9H8TFVYPR8CW
+)

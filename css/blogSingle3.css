@@ -1,0 +1,458 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.size {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1056px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    align-items: center;
+    position: relative;
+}
+
+.navbar .logo {
+    width: 180px;
+    padding-bottom: 16px;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+    list-style: none;
+}
+
+.navbar ul li {
+    position: relative;
+    padding: 0 1rem;
+    padding-bottom: 16px;
+    cursor: pointer;
+}
+
+.navbar ul li::before {
+    display: none;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: #34475e;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: -500%;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.navbar ul li:hover a {
+    color: white;
+}
+
+.navbar ul li:hover::before {
+    display: block;
+}
+
+.navbar .hamburger-menu {
+    width: 32px;
+    height: 32px;
+    display: none;
+}
+
+.blogTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* open class */
+
+.navbar ul.open {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    bottom: -170px;
+    z-index: 50;
+    background-color: white;
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.navbar ul.open li {
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid rgb(240, 240, 240);
+}
+
+.navbar ul.open li a {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.navbar ul.open li:hover::before {
+    display: none;
+}
+
+.navbar ul.open li a:hover {
+    color: black;
+}
+
+/* open class end */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 460px;
+    background-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.2)
+        ),
+        url("../images/blog-banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.overlay .title {
+    font-size: 40px;
+    font-weight: 400;
+    color: white;
+}
+
+.overlay .title span {
+    font-weight: 600;
+    color: #7aba2e;
+}
+
+.overlay .subtitle {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 300;
+}
+
+.overlay .btn {
+    background-color: #ffa500;
+    border: 1px solid white;
+    padding: 10px 1.4rem;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    width: fit-content;
+}
+
+.post-top {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-top .share {
+    display: flex;
+    gap: 10px;
+    height: fit-content;
+}
+
+.post-top .share .fb,
+.post-top .share .twitter {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    padding: 3px 4px;
+    background-color: #7aba2e;
+    text-decoration: none;
+}
+.post-top .share img {
+    width: 18px;
+    filter: contrast(100%);
+}
+.post-top .share span {
+    color: white;
+    font-size: 13px;
+}
+
+.post-top .tags {
+    display: flex;
+    max-width: 500px;
+    border-radius: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    background-color: #7aba2e;
+    padding: 5px 1rem;
+    color: white;
+}
+
+.post-top .tags li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 0 5px;
+}
+
+.post-top .tags li a:hover {
+    text-decoration: underline;
+}
+.blog p {
+    margin:25px;
+    font-weight: 500;
+    text-align: left;
+}
+
+.main-content {
+    margin: 2rem auto;
+    display: flex;
+    gap: 38px;
+}
+
+.main-content .post {
+    width: 70%;
+}
+
+.main-content .blog_options {
+    margin-top: 1rem;
+    background-color: #fafafa;
+    padding: 1.2rem 1rem;
+    text-align: end;
+}
+
+.main-content .blog_options a {
+    background-color: #7aba2e;
+    padding: 7px 15px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.main-content .blog_author {
+    margin-top: 2rem;
+    width: 100%;
+    height: 300px;
+    background-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)
+        ),
+        url("https://www.petprotect.co.uk/wp-content/themes/petprotect-wp/images/shutterstock_68980336.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.blog_author {
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+}
+
+.blog_author h2 {
+    color: white;
+    margin-left: 1rem;
+    font-weight: 400;
+    font-size: 32px;
+}
+
+.main-content .recent_posts {
+    width: 30%;
+}
+
+.recent_posts .title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.recent_posts .title h1 {
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.recent_posts .cards {
+    margin-top: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.cards .card {
+    position: relative;
+}
+
+.cards .card::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    height: 7px;
+    background-color: #7aba2e;
+}
+
+.cards .card .thumbnail {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.cards .card .card-content {
+    background-color: #34475e;
+}
+
+.cards .card .card-content .card-title {
+    display: inline-block;
+    position: relative;
+    padding: 0 1rem;
+    margin-top: 1rem;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 26.4px;
+    text-decoration: none;
+    color: white;
+}
+
+.cards .card .card-content .card-title:hover {
+    text-decoration: underline;
+}
+
+.cards .card .card-content .card-title::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 5px;
+    left: 0;
+    top: 0;
+    background-color: #7aba2e;
+}
+.cards .card .card-content .card-meta {
+    margin-top: 1rem;
+    color: white;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    padding-bottom: 1rem;
+}
+
+.cards .card .card-content .card-meta span:last-child {
+    max-width: 100px;
+}
+
+.footer {
+    background-color: #34475e;
+}
+
+.footer-wrapper {
+    padding: 3rem 0;
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-wrapper .left {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 1.6rem;
+    flex-wrap: wrap;
+}
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-wrapper .left .text {
+    font-size: 12.8px;
+    color: white;
+    font-weight: 400;
+    margin-top: 1rem;
+}
+
+.footer .socials {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 auto;
+}
+.footer .socials a img {
+    width: 25px;
+}
+
+@media only screen and (max-width: 992px) {
+    .post-top {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .main-content {
+        flex-direction: column;
+    }
+    .main-content .post {
+        width: 100%;
+    }
+    .main-content .recent_posts {
+        width: 100%;
+    }
+    .recent_posts .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .recent_posts .title {
+        margin-top: 2rem;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .navbar ul {
+        display: none;
+    }
+    .navbar .hamburger-menu {
+        display: inline-block;
+    }
+    .overlay {
+        align-items: center;
+    }
+    .footer-wrapper {
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .size {
+        width: 90%;
+    }
+}

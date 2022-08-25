@@ -1,0 +1,30 @@
+[19-Apr-2022 17:48:19 UTC] PHP Parse error:  syntax error, unexpected '$headers' (T_VARIABLE) in /home/customer/www/hounslowpassportphotoshop.co.uk/public_html/index.php on line 203
+[19-Apr-2022 18:43:59 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/customer/www/hounslowpassportphotoshop.co.uk/public_html/PHPMailerAutoload.php on line 45
+[19-Apr-2022 18:43:59 UTC] PHP Fatal error:  Uncaught Error: Class 'PHPMailer' not found in /home/customer/www/hounslowpassportphotoshop.co.uk/public_html/index.php:149
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/hounslowpassportphotoshop.co.uk/public_html/index.php on line 149
+[19-Apr-2022 18:52:47 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/customer/www/hounslowpassportphotoshop.co.uk/public_html/PHPMailerAutoload.php on line 45
+[05-May-2022 17:58:04 UTC] PHP Fatal error:  require_once(): Failed opening required './config/config.php' (include_path='.:/usr/local/php74/pear') in /home/customer/www/hounslowpassportphotoshop.co.uk/public_html/blog.php on line 24
+[05-May-2022 18:24:53 UTC] PHP Notice:  Undefined variable: filter_col in /home/customer/www/hounslowpassportphotoshop.co.uk/public_html/blog.php on line 36
+[05-May-2022 18:24:53 UTC] PHP Notice:  Undefined variable: order_by in /home/customer/www/hounslowpassportphotoshop.co.uk/public_html/blog.php on line 39
+[05-May-2022 18:24:53 UTC] PHP Notice:  Undefined variable: search_string in /home/customer/www/hounslowpassportphotoshop.co.uk/public_html/blog.php on line 49
+[05-May-2022 18:29:25 UTC] PHP Notice:  Undefined variable: filter_col in /home/customer/www/hounslowpassportphotoshop.co.uk/public_html/blog.php on line 36
+[05-May-2022 18:29:25 UTC] PHP Notice:  Undefined variable: order_by in /home/customer/www/hounslowpassportphotoshop.co.uk/public_html/blog.php on line 39
+[05-May-2022 18:29:25 UTC] PHP Notice:  Undefined variable: search_string in /home/customer/www/hounslowpassportphotoshop.co.uk/public_html/blog.php on line 49
+[05-May-2022 18:36:55 UTC] PHP Notice:  Undefined variable: order_by in /home/customer/www/hounslowpassportphotoshop.co.uk/public_html/blog.php on line 40
+[10-May-2022 08:23:18 UTC] PHP Notice:  Undefined variable: row in /home/customer/www/hounslowpassportphotoshop.co.uk/public_html/blog-view.php on line 98
+[10-May-2022 08:23:18 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/customer/www/hounslowpassportphotoshop.co.uk/public_html/blog-view.php on line 98
+[10-May-2022 08:23:18 UTC] PHP Notice:  Undefined variable: row in /home/customer/www/hounslowpassportphotoshop.co.uk/public_html/blog-view.php on line 106
+[10-May-2022 08:23:18 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/customer/www/hounslowpassportphotoshop.co.uk/public_html/blog-view.php on line 106
+[10-May-2022 08:23:18 UTC] PHP Notice:  Undefined variable: row in /home/customer/www/hounslowpassportphotoshop.co.uk/public_html/blog-view.php on line 107
+[10-May-2022 08:23:18 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/customer/www/hounslowpassportphotoshop.co.uk/public_html/blog-view.php on line 107
+[10-May-2022 08:23:18 UTC] PHP Notice:  Undefined variable: row in /home/customer/www/hounslowpassportphotoshop.co.uk/public_html/blog-view.php on line 124
+[10-May-2022 08:23:18 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/customer/www/hounslowpassportphotoshop.co.uk/public_html/blog-view.php on line 124
+[10-May-2022 08:42:05 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/customer/www/hounslowpassportphotoshop.co.uk/public_html/blog-view.php on line 156
+[10-May-2022 09:02:23 UTC] PHP Notice:  Undefined variable: filter_col in /home/customer/www/hounslowpassportphotoshop.co.uk/public_html/blog-view.php on line 38
+[10-May-2022 09:02:23 UTC] PHP Notice:  Undefined variable: order_by in /home/customer/www/hounslowpassportphotoshop.co.uk/public_html/blog-view.php on line 41
+[10-May-2022 09:20:52 UTC] PHP Parse error:  syntax error, unexpected '2' (T_LNUMBER) in /home/customer/www/hounslowpassportphotoshop.co.uk/public_html/blog-view.php on line 62
+[10-May-2022 09:21:59 UTC] PHP Parse error:  syntax error, unexpected ''2'' (T_CONSTANT_ENCAPSED_STRING) in /home/customer/www/hounslowpassportphotoshop.co.uk/public_html/blog-view.php on line 62
+[19-May-2022 11:29:32 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/customer/www/hounslowpassportphotoshop.co.uk/public_html/blog-view.php on line 125
+[19-May-2022 11:31:13 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/customer/www/hounslowpassportphotoshop.co.uk/public_html/blog-view.php on line 125
