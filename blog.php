@@ -110,7 +110,7 @@ $total_pages = $db->totalPages;
             <div class="card">
 
 
-            <a data-gallery="blog" target="_blank" href="https://hounslowpassportphotoshop.co.uk/blog-view.php?blog_id=<?php echo xss_clean($row['id']); ?> " style="list-style:none; text-decoration: none; color: black; background: none;">  
+            <a data-gallery="blog" target="_blank" href="https://localhost/hounslow/blog-view.php?blog_id=<?php echo xss_clean($row['id']); ?> " style="list-style:none; text-decoration: none; color: black; background: none;">  
                 <div class="card-header">
                     <p>
                         <span>  <?php echo xss_clean($row['created_at']); ?> </span>
@@ -127,7 +127,7 @@ $total_pages = $db->totalPages;
 				 ?>
                  <?php echo substr_replace($txt, "...", 300);?>
                         </p>
-                        <a href="https://hounslowpassportphotoshop.co.uk/blog-view.php?blog_id=<?php echo xss_clean($row['id']); ?>">Read more</a>
+                        <a href="https://localhost/hounslow/blog-view.php?blog_id=<?php echo xss_clean($row['id']); ?>">Read more</a>
                     </div>
                 </div>
                 <div class="card-footer">

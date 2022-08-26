@@ -157,11 +157,11 @@ $row_all = $db_all->arraybuilder()->paginate('blogs', $page, $select,'LIMIT 2');
                            
                         </div>
                         <div class="card-content">
-                            <a class="card-title" href="https://hounslowpassportphotoshop.co.uk/blog-view.php?blog_id=<?php echo xss_clean($row['id']); ?>"
+                            <a class="card-title" href="https://localhost/hounslow/blog-view.php?blog_id=<?php echo xss_clean($row['id']); ?>"
                                 >  <?php echo xss_clean($row['blog_name']); ?>   </a
                             >
 
-                            <a href="https://hounslowpassportphotoshop.co.uk/blog-view.php?blog_id=<?php echo xss_clean($row['id']); ?>">  
+                            <a href="https://localhost/hounslow/blog-view.php?blog_id=<?php echo xss_clean($row['id']); ?>">  
                             <p class="card-meta">
                                 <p style="color:white; margin:3px; padding:3px">
                                		
