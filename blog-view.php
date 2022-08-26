@@ -3,27 +3,6 @@
 
 <head>
 
-
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
-    <meta name="description" content="hounslow passport photoshop">
-    <meta name="keywords" content="hounslow passport photoshop">
-
-
-
-    <title>Royal London</title>
-
-
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./css/blogSingle3.css" />
-
-
-
-</head>
 <?php
 require_once './blog-admin/config/config.php';
 $filter_col = filter_input(INPUT_GET, 'filter_col');
@@ -40,7 +19,7 @@ if (!$page) {
 
 //Get DB instance. i.e instance of MYSQLiDB Library
 $db = getDbInstance();
-$select = array('id', 'blog_name', 'blog_top_content', 'blog_content','video','blog_image','publish','created_at', 'updated_at');
+$select = array('id', 'blog_name', 'blog_top_content', 'blog_content','meta_title','meta_description','video','blog_image','publish','created_at', 'updated_at');
 
 // Set pagination limit
 
@@ -54,7 +33,7 @@ $rows = $db->arraybuilder()->paginate('blogs', $page, $select);
 $total_pages = $db->totalPages;
 
 $db_all = getDbInstance();
-$select = array('id', 'blog_name', 'blog_top_content', 'blog_content','video','blog_image','publish','created_at', 'updated_at');
+$select = array('id', 'blog_name', 'blog_top_content', 'blog_content','meta_title','meta_description','video','blog_image','publish','created_at', 'updated_at');
 if (!$filter_col) {
 	$filter_col = 'id';
 }
@@ -66,7 +45,37 @@ if ($order_by) {
 }
 
 $row_all = $db_all->arraybuilder()->paginate('blogs', $page, $select,'LIMIT 2');
+
+
+
 ?>
+
+
+
+
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+
+    <meta name="description" content="<?php echo xss_clean($rows[0]['meta_description']); ?>">
+    <meta name="keywords" content="hounslow passport photoshop">
+
+
+
+    <title>Royal London</title>
+
+
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/blogSingle3.css" />
+
+
+
+</head>
+
 
 
 
@@ -111,6 +120,8 @@ $row_all = $db_all->arraybuilder()->paginate('blogs', $page, $select,'LIMIT 2');
 
 
 	<h1 class="title text-center animated fadeInDownShort blogTitle" style="margin:7px"><?php echo xss_clean($row['blog_name']); ?></h1>
+    <h1> meta titel: <?php echo xss_clean($row['meta_title']); ?> </h1>
+    <h1> meta desc: <?php echo xss_clean($row['meta_description']); ?> </h1>
 
                 <div class="blog" style="text-align:center">
 
