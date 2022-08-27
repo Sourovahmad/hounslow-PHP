@@ -60,7 +60,7 @@ $row_all = $db_all->arraybuilder()->paginate('blogs', $page, $select,'LIMIT 2');
     <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
 
     <meta name="description" content="<?php echo xss_clean($rows[0]['meta_description']); ?>">
-    <meta name="keywords" content="hounslow passport photoshop">
+    <meta name="keywords" content="<?php echo xss_clean($rows[0]['meta_title']); ?>">
 
 
 
@@ -120,8 +120,7 @@ $row_all = $db_all->arraybuilder()->paginate('blogs', $page, $select,'LIMIT 2');
 
 
 	<h1 class="title text-center animated fadeInDownShort blogTitle" style="margin:7px"><?php echo xss_clean($row['blog_name']); ?></h1>
-    <h1> meta titel: <?php echo xss_clean($row['meta_title']); ?> </h1>
-    <h1> meta desc: <?php echo xss_clean($row['meta_description']); ?> </h1>
+
 
                 <div class="blog" style="text-align:center">
 
