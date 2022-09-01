@@ -19,7 +19,7 @@ if (!$page) {
 
 //Get DB instance. i.e instance of MYSQLiDB Library
 $db = getDbInstance();
-$select = array('id', 'blog_name', 'blog_top_content', 'blog_content','meta_title','meta_description','video','blog_image','publish','created_at', 'updated_at');
+$select = array('id', 'blog_name', 'blog_top_content', 'blog_content','meta_title','meta_description','video','blog_image','image_alt','publish','created_at', 'updated_at');
 
 // Set pagination limit
 
@@ -33,7 +33,7 @@ $rows = $db->arraybuilder()->paginate('blogs', $page, $select);
 $total_pages = $db->totalPages;
 
 $db_all = getDbInstance();
-$select = array('id', 'blog_name', 'blog_top_content', 'blog_content','meta_title','meta_description','video','blog_image','publish','created_at', 'updated_at');
+$select = array('id', 'blog_name', 'blog_top_content', 'blog_content','meta_title','meta_description','video','blog_image', 'image_alt','publish','created_at', 'updated_at');
 if (!$filter_col) {
 	$filter_col = 'id';
 }
@@ -64,7 +64,7 @@ $row_all = $db_all->arraybuilder()->paginate('blogs', $page, $select,'LIMIT 2');
 
 
 
-    <title>Royal London</title>
+    <title> <?php echo xss_clean($rows[0]['meta_title']); ?> </title>
 
 
         <meta charset="UTF-8" />
@@ -134,7 +134,8 @@ $row_all = $db_all->arraybuilder()->paginate('blogs', $page, $select,'LIMIT 2');
                                              <?php if($row['video']==""){ ?>
                                         
                                           <?php if($row['blog_image'] !=""){ ?>
-							            <img class="img-fluid-full" src="/blog-admin/uploads/<?php echo xss_clean($row['blog_image']); ?>" style="width:93%">
+							            <img class="img-fluid-full" src="/blog-admin/uploads/<?php echo xss_clean($row['blog_image']); ?>" alt="<?php echo xss_clean($row['image_alt']); ?>" style="width:93%" >
+                             
                                             <?php }  ?>
 							<?php } else { ?>
 						<iframe src="<?php echo $row['video'];?>" frameborder="0" width="100%" height="400"></iframe>

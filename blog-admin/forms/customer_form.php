@@ -31,11 +31,11 @@
 
 	 <div class="form-group">
         <label for="Image">Blog Image</label>
-           <input type="file" name="blog_image" value="<?php echo htmlspecialchars($edit ? $customer['blog_image'] : '', ENT_QUOTES, 'UTF-8'); ?>" placeholder="" class="form-control"  id = "blog_image" >
+           <input type="file" name="blog_image" value="<?php echo htmlspecialchars($edit ? $customer['blog_image'] : '', ENT_QUOTES, 'UTF-8'); ?>" placeholder="" class="form-control"  id = "blog_image" required>
     </div> 
 
 
-    //meta tag desctioption 
+    <!-- meta tag desctioption  -->
 
    <div class="form-group">
         <label for="video">Meta Title </label>
@@ -49,6 +49,16 @@
         <label for="video">Meta desctioption </label>
            <input type="text" name="meta_description" value="<?php echo htmlspecialchars($edit ? $customer['meta_description'] : '', ENT_QUOTES, 'UTF-8'); ?>" placeholder="" class="form-control"  id = "meta_description" >
     </div> 
+
+
+
+    
+    
+   <div class="form-group">
+        <label for="video">image Alt tag</label>
+           <input type="text" name="image_alt" value="<?php echo htmlspecialchars($edit ? $customer['image_alt'] : '', ENT_QUOTES, 'UTF-8'); ?>" placeholder="" class="form-control"  id = "image_alt" required>
+    </div> 
+	
 	
 	
 
