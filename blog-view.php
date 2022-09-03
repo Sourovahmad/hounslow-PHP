@@ -24,10 +24,10 @@ $select = array('id', 'blog_name', 'blog_top_content', 'blog_content','meta_titl
 // Set pagination limit
 
 $db->pageLimit = $pagelimit;
-$blog_id = filter_input(INPUT_GET, 'blog_id');
+$blog_name = filter_input(INPUT_GET, 'blog_name');
 
 // Get result of the query.
-$db->where('id', $blog_id);
+$db->where('blog_name', $blog_name);
 $rows = $db->arraybuilder()->paginate('blogs', $page, $select);
 
 $total_pages = $db->totalPages;
@@ -168,11 +168,27 @@ $row_all = $db_all->arraybuilder()->paginate('blogs', $page, $select,'LIMIT 2');
                            
                         </div>
                         <div class="card-content">
-                            <a class="card-title" href="https://localhost/hounslow/blog-view.php?blog_id=<?php echo xss_clean($row['id']); ?>"
-                                >  <?php echo xss_clean($row['blog_name']); ?>   </a
-                            >
 
-                            <a href="https://localhost/hounslow/blog-view.php?blog_id=<?php echo xss_clean($row['id']); ?>">  
+                                <?php
+
+                            $query_string = 'blog_name=' . urlencode(xss_clean($row['blog_name']));
+
+                            echo  '<a class="card-title" href="https://localhost/hounslow/blog-view.php?'. htmlentities($query_string) .  '">'. xss_clean($row["blog_name"]) . '</a>'
+
+                            ?>
+
+
+
+                            <?php
+
+                        $query_string = 'blog_name=' . urlencode(xss_clean($row['blog_name']));
+
+                        echo  '<a  href="https://localhost/hounslow/blog-view.php?'. htmlentities($query_string) .'" >'
+
+                        ?>
+
+
+
                             <p class="card-meta">
                                 <p style="color:white; margin:3px; padding:3px">
                                		

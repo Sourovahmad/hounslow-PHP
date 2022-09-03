@@ -109,8 +109,13 @@ $total_pages = $db->totalPages;
 
             <div class="card">
 
+            <?php
 
-            <a data-gallery="blog" target="_blank" href="https://localhost/hounslow/blog-view.php?blog_id=<?php echo xss_clean($row['id']); ?> " style="list-style:none; text-decoration: none; color: black; background: none;">  
+                $query_string = 'blog_name=' . urlencode(xss_clean($row['blog_name']));
+            
+            echo  '<a data-gallery="blog" target="_blank" href="https://localhost/hounslow/blog-view.php?'. htmlentities($query_string) .  '"  style="list-style:none; text-decoration: none; color: black; background: none;" >'
+
+            ?>
                 <div class="card-header">
                     <p>
                         <span>  <?php echo xss_clean($row['created_at']); ?> </span>
@@ -127,7 +132,17 @@ $total_pages = $db->totalPages;
 				 ?>
                  <?php echo substr_replace($txt, "...", 300);?>
                         </p>
-                        <a href="https://localhost/hounslow/blog-view.php?blog_id=<?php echo xss_clean($row['id']); ?>">Read more</a>
+                        <!-- <a href="https://localhost/hounslow/blog-view.php?blog_name=<?php echo xss_clean($row['blog_name']); ?>">Read more</a> -->
+
+                        <?php
+
+$query_string = 'blog_name=' . urlencode(xss_clean($row['blog_name']));
+
+echo  '<a  href="https://localhost/hounslow/blog-view.php?'. htmlentities($query_string) .  '" >  Read more</a> '
+
+?>
+
+
                     </div>
                 </div>
                 <div class="card-footer">
