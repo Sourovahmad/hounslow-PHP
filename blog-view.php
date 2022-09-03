@@ -25,9 +25,10 @@ $select = array('id', 'blog_name', 'blog_top_content', 'blog_content','meta_titl
 
 $db->pageLimit = $pagelimit;
 $blog_name = filter_input(INPUT_GET, 'blog_name');
+$replaced_blog = str_replace("-", " ", $blog_name);
 
 // Get result of the query.
-$db->where('blog_name', $blog_name);
+$db->where('blog_name', $replaced_blog);
 $rows = $db->arraybuilder()->paginate('blogs', $page, $select);
 
 $total_pages = $db->totalPages;
@@ -173,7 +174,10 @@ $row_all = $db_all->arraybuilder()->paginate('blogs', $page, $select,'LIMIT 2');
 
                             $query_string = 'blog_name=' . urlencode(xss_clean($row['blog_name']));
 
-                            echo  '<a class="card-title" href="https://localhost/hounslow/blog-view.php?'. htmlentities($query_string) .  '">'. xss_clean($row["blog_name"]) . '</a>'
+                            
+                            $queryfull =  '<a class="card-title" href="https://localhost/hounslow/blog-view.php?'. htmlentities($query_string) .  '">'. xss_clean($row["blog_name"]) . '</a>' ;
+
+                            echo str_replace("+","-",$queryfull);
 
                             ?>
 
@@ -183,7 +187,11 @@ $row_all = $db_all->arraybuilder()->paginate('blogs', $page, $select,'LIMIT 2');
 
                         $query_string = 'blog_name=' . urlencode(xss_clean($row['blog_name']));
 
-                        echo  '<a  href="https://localhost/hounslow/blog-view.php?'. htmlentities($query_string) .'" >'
+                        $full_query_str =   '<a  href="https://localhost/hounslow/blog-view.php?'. htmlentities($query_string) .'" >';
+
+                        echo str_replace("+","-",$full_query_str);
+
+
 
                         ?>
 

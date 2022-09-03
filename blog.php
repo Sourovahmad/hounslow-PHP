@@ -113,7 +113,9 @@ $total_pages = $db->totalPages;
 
                 $query_string = 'blog_name=' . urlencode(xss_clean($row['blog_name']));
             
-            echo  '<a data-gallery="blog" target="_blank" href="https://localhost/hounslow/blog-view.php?'. htmlentities($query_string) .  '"  style="list-style:none; text-decoration: none; color: black; background: none;" >'
+            $queryString =   '<a data-gallery="blog" target="_blank" href="https://localhost/hounslow/blog-view.php?'. htmlentities($query_string) .  '"  style="list-style:none; text-decoration: none; color: black; background: none;" >';
+
+            echo str_replace("+","-",$queryString);
 
             ?>
                 <div class="card-header">
@@ -132,15 +134,17 @@ $total_pages = $db->totalPages;
 				 ?>
                  <?php echo substr_replace($txt, "...", 300);?>
                         </p>
-                        <!-- <a href="https://localhost/hounslow/blog-view.php?blog_name=<?php echo xss_clean($row['blog_name']); ?>">Read more</a> -->
+                    
 
-                        <?php
+                                                <?php
 
-$query_string = 'blog_name=' . urlencode(xss_clean($row['blog_name']));
+                        $query_string = 'blog_name=' . urlencode(xss_clean($row['blog_name']));
 
-echo  '<a  href="https://localhost/hounslow/blog-view.php?'. htmlentities($query_string) .  '" >  Read more</a> '
+                        $fullQuery =  '<a  href="https://localhost/hounslow/blog-view.php?'. htmlentities($query_string) .  '" >  Read more</a> ';
 
-?>
+                        echo str_replace("+","-", $fullQuery);
+
+                        ?>
 
 
                     </div>
